@@ -1,1 +1,1 @@
-# my project
+# browser-namespace
