@@ -31,4 +31,5 @@ module.exports = {
       { fixStyle: "inline-type-imports" },
     ],
   },
+  ignorePatterns: ["src/chrome-types"],
 };
