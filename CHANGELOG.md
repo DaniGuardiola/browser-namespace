@@ -1,5 +1,11 @@
 # browser-namespace
 
+## 1.2.0
+
+### Minor Changes
+
+- a18cf8e: Fix: use globalThis instead of window.
+
 ## 1.1.0
 
 ### Minor Changes
