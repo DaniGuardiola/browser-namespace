@@ -40,7 +40,7 @@ import { chrome } from "browser-namespace";
 await chrome.debugger.sendCommand(/* ... */); // for example
 ```
 
-The types are derived from [`@types/chrome`](https://www.npmjs.com/package/@types/chrome). The reason these types are copied instead of imported is because they declare `chrome` as a global variable, which might be unwanted. The version in this repo does not.
+The types are derived from [`@types/chrome`](https://www.npmjs.com/package/@types/chrome). The reason these types are copied instead of imported is because they declare `chrome` as a global variable, which might be unwanted. The version in this repo is patched to fix that.
 
 Again, support for specific features depends on the browser and version.
 

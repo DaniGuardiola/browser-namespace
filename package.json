@@ -18,7 +18,9 @@
     "download-chrome-types": "bun scripts/download-chrome-types.ts"
   },
   "dependencies": {
-    "@types/webextension-polyfill": ">=0.10.7"
+    "@types/webextension-polyfill": "*",
+    "@types/filesystem": "*",
+    "@types/har-format": "*"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
