@@ -1,7 +1,7 @@
 {
   "name": "browser-namespace",
   "description": "Cross-browser support for the `browser` namespace in browser extensions. Fully typed.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": {
     "email": "hi@daniguardio.la",
     "name": "Dani Guardiola",
