@@ -12,7 +12,8 @@ declare global {
 ////////////////////
 // Public Type
 ////////////////////
-export type Chrome = typeof chrome;
+declare namespace chrome {}
+export default chrome;
 
 ////////////////////
 // Accessibility Features

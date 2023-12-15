@@ -26,7 +26,8 @@ const EXPORT_REPLACEMENT_REGEXP =
 const EXPORT_REPLACEMENT = `////////////////////
 // Public Type
 ////////////////////
-export type Chrome = typeof chrome;`;
+declare namespace chrome {}
+export default chrome;`;
 const EVAL_REGEXP = /export function eval/gm;
 const EVAL_REPLACEMENT = `// @ts-expect-error This error is useless in this context
 export function eval`;
