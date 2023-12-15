@@ -1,11 +1,15 @@
-// eslint-disable-next-line @typescript-eslint/consistent-type-imports
-export type Browser = typeof import("webextension-polyfill");
+import type Browser from "webextension-polyfill";
+
+import type Chrome from "./chrome-types/index.ts";
+
+export { Browser, Chrome };
+
+export type BrowserAPI = typeof Browser;
 
 // @ts-expect-error Ignoring missing globalThis type.
-export const browser: Browser = globalThis.browser ?? globalThis.chrome;
+export const browser: BrowserAPI = globalThis.browser ?? globalThis.chrome;
 
-// eslint-disable-next-line @typescript-eslint/consistent-type-imports
-export type Chrome = import("./chrome-types/index.d.ts").Chrome;
+export type ChromeAPI = typeof Chrome;
 
 // @ts-expect-error Ignoring missing globalThis type.
-export const chrome: Chrome = globalThis.chrome ?? globalThis.browser;
+export const chrome: ChromeAPI = globalThis.chrome ?? globalThis.browser;

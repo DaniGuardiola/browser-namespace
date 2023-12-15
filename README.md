@@ -19,7 +19,7 @@ Some browsers use the `browser` API namespace, while others use `chrome`. This p
 It essentially does this:
 
 ```ts
-export const browser: Browser = window.browser ?? window.chrome;
+export const browser: BrowserAPI = window.browser ?? window.chrome;
 ```
 
 The types come from [`@types/webextension-polyfill`](https://www.npmjs.com/package/@types/webextension-polyfill).
@@ -46,8 +46,21 @@ Again, support for specific features depends on the browser and version.
 
 ## Types
 
-The types for both namespaces can be imported directly:
+The types for both browser and Chrome API namespaces can be imported directly.
+
+There are types for the APIs themselves (corresponding to the types of the `browser` and `chrome` runtime objects):
+
+```ts
+import type { BrowserAPI, ChromeAPI } from "browser-namespace";
+```
+
+Additionally, the TypeScript namespace declarations are also exported:
 
 ```ts
 import type { Browser, Chrome } from "browser-namespace";
 ```
+
+These are useful to access certain types. Some examples:
+
+- `Browser.Runtime.Port`, returned from `browser.runtime.connect`.
+- `Chrome.debugger.Debuggee`, passed to `chrome.debugger.attach`.
