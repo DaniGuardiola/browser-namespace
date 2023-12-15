@@ -1,5 +1,11 @@
 # browser-namespace
 
+## 1.3.0
+
+### Minor Changes
+
+- 66af319: Improved exported types, including namespaces.
+
 ## 1.2.0
 
 ### Minor Changes
